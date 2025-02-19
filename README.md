@@ -25,13 +25,13 @@ cd whatsappbotqr
 3. **Instalar las dependencias:**
 
 ```bash
-npm i
+npm install
 ```
 
 4. **Iniciar el servidor:**
 
 ```bash
-node index.js
+npm run start
 ```
 
 5. **Abrir el navegador:**
@@ -42,6 +42,7 @@ node index.js
 
    - Haz clic en el botón **Iniciar Sesión con WhatsApp**.
    - Escanea el código QR que aparece en pantalla con la app de WhatsApp en tu teléfono.
+   **Ten en cuenta que el código QR cambia cada 30 segundos, entonces no olvides refrescar la página.**
 
 7. **Cargar los contactos desde un JSON:**
 
@@ -49,7 +50,7 @@ node index.js
 
 8. **Enviar mensajes:**
 
-   - Escribe el mensaje que deseas enviar a todos los contactos cargados y presiona **Enviar**.
+   - Escribe el mensaje que deseas enviar a todos los contactos cargados y presiona **Enviar códigos QR**.
 
 ## Ejemplo de JSON esperado
 
