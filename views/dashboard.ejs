@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send QR Codes</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    form { max-width: 500px; margin: auto; }
+    input, textarea, button { width: 100%; padding: 10px; margin: 5px 0; }
+    .success { color: green; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+
+  <h2>Enviar códigos QR vía WhatsApp</h2>
+
+  <% if (query.success) { %>
+    <p class="success">✅ Mensajes enviados con éxito!</p>
+  <% } %>
+
+  <% if (query.error) { %>
+    <p class="error">❌ Error al enviar mensajes!</p>
+  <% } %>
+
+  <form action="/send-qr" method="POST">
+    <label>API URL para contactos (JSON):</label>
+    <input type="text" name="contactsApiUrl" required placeholder="https://sheetdb.io/api/v1/xdd4zzca36ois">
+
+    <label>Plantilla del mensaje.</label>
+    <textarea name="messageTemplate" rows="4"><%= messageTemplate %></textarea>
+
+    <button type="submit">Enviar códigos QR</button>
+  </form>
+
+
+  <!-- Botón para redirigir a /qr -->
+<form action="/qr" method="GET">
+  <button type="submit">Iniciar sesión con WhatsApp </button>
+</form>
+
+</body>
+</html>
